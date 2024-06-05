@@ -1,14 +1,12 @@
 function modulo () {
     if (index < 0) {
-        index = index + 26
-    } else {
-        index = index % 26
+        index = index * -1
     }
-    if (key < 1) {
-        key = key + 25
-    } else {
-        key = key % 25
+    if (key < 0) {
+        key = key * -1
     }
+    index = index % 26
+    key = key % 26
 }
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     key += -1
